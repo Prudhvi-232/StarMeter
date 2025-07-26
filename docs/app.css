@@ -1,55 +1,114 @@
-.card-wrapper {
-    margin: 5% 0;
-  }
-  
-/* You can adjust the image size by increasing/decreasing the width, height */
-.custom-circle-image {
-  width: 10vw; /* note i used vw not px for better responsive */
-  height: 10vw;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    color: #333;
 }
 
-.custom-circle-image img {
-  object-fit: cover;
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #007bff !important;
+    font-size: 1.5rem;
+}
+
+.card-wrapper .card {
+    border: none;
+    transition: transform .2s, box-shadow .2s;
+    cursor: pointer;
+    background: transparent;
+}
+
+.card-wrapper:hover .card {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.custom-circle-image {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .card-title {
-  letter-spacing: 1.1px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
 }
 
-.card-text {
-  font-family: MerriweatherRegular;
-  font-size: 22px;
-  line-height: initial;
+.upload-results-card {
+    padding: 2rem;
+    border: none;
+    border-radius: 15px;
+    background-color: #ffffff;
 }
 
-.dropzone {
-  border-style: dashed;
+.dz-message {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: 1rem 0;
+    border: 2px dashed #007bff;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color .2s;
 }
 
+.dz-message:hover {
+    background-color: #e9ecef;
+}
 
-.error {
-  font-family: MerriweatherRegular;
-  font-size: 30px;
-  line-height: initial;
-  color: blue;
-  text-align: center;
+#error {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#resultHolder .uploaded-image {
+    max-width: 100%;
+    max-height: 300px; /* Control max height */
+    object-fit: contain; /* Ensure aspect ratio is maintained */
+    border-radius: 8px;
+    margin-top: 0;
+    border: 1px solid #ddd;
+    padding: 5px;
 }
 
 #classTable {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+    width: 100%;
+    margin-top: 0;
+    border-collapse: collapse;
 }
 
-#classTable td, #classTable th {
-  border: 1px solid #ddd;
-  padding: 8px;
+#classTable th, #classTable td {
+    padding: 12px 15px;
+    text-align: left;
 }
 
-#classTable th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #4CAF50;
-  color: white;
+#classTable thead th {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+}
+
+#classTable tbody tr:nth-of-type(even) {
+    background-color: #f8f9fa;
+}
+
+.best-match {
+    background-color: #d4edda !important; /* A light green color */
+    font-weight: bold;
+    color: #155724;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-weight: bold;
+    padding: 10px 0;
 }

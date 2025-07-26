@@ -1,144 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Star Meter - Face Detection</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" href="./dropzone.min.css" />
+		<link rel="stylesheet" href="./app.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports Person Classifier</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./dropzone.min.css">
-    <link rel="stylesheet" href="./app.css">
-</head>
+	<body>
+		<nav class="navbar navbar-light justify-content-center">
+			<a class="navbar-brand" href="#">STAR METER - FACE DETECTOR</a>
+		</nav>
 
-<body>
-    <nav class="navbar navbar-light bg-success justify-content-center" style="opacity: 0.9;">
-        <a class="navbar-brand" href="#" style="opacity: 1; font-size: 24px; font-weight: bold; color: white;">IMAGE CLASSIFIER</a>
-    </nav>
+		<div class="container-fluid">
+			<div class="row">
+				<div
+					class="col card-wrapper"
+					data-player="Iconstar_allu_arjun pics"
+				>
+					<div class="card">
+						<div
+							class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image"
+						>
+							<img
+								class="w-100 h-100"
+								src="./images/allu arjun.png"
+								alt="Allu Arjun"
+							/>
+						</div>
+						<div class="card-body text-center mt-2">
+							<h4 class="text-uppercase card-title">
+								Allu Arjun
+							</h4>
+						</div>
+					</div>
+				</div>
+				<div class="col card-wrapper" data-player="samantha_pics">
+					<div class="card">
+						<div
+							class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image"
+						>
+							<img
+								class="w-100 h-100"
+								src="./images/samantha.png"
+								alt="Samantha"
+							/>
+						</div>
+						<div class="card-body text-center mt-2">
+							<h4 class="text-uppercase card-title">Samantha</h4>
+						</div>
+					</div>
+				</div>
+				<div class="col card-wrapper" data-player="sindhuri_pics">
+					<div class="card">
+						<div
+							class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image"
+						>
+							<img
+								class="w-100 h-100"
+								src="./images/sindhoo.png"
+								alt="Sindhuri"
+							/>
+						</div>
+						<div class="card-body text-center mt-2">
+							<h4 class="text-uppercase card-title">Sindhuri</h4>
+						</div>
+					</div>
+				</div>
 
-    <div class="container">
-        <div class="row">
-        <div class="col card-wrapper" data-player="Iconstar_allu_arjun pics">
-                <div class="card border-0">
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                        <img class="w-100 h-100" src="./images/allu arjun.png" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-center mt-4">
-                        <h4 class="text-uppercase card-title">Allu Arjun</h4>
-                        </p>
-                    </div>
-                </div>
-            </div>            
-            <div class="col card-wrapper" data-player="samantha_pics">
-                    <div class="card border-0">
-                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                            <img class="w-100 h-100" src="./images/samantha.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body text-center mt-4">
-                            <h4 class="text-uppercase card-title">Samantha</h4>
-                            </p>
-                        </div>
-                    </div>
-            </div>            
-            <div class="col card-wrapper" data-player="sindhuri_pics">
-                    <div class="card border-0">
-                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                            <img class="w-100 h-100" src="./images/sindhoo.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body text-center mt-4">
-                            <h4 class="text-uppercase card-title">Sindhuri</h4>
-                            </p>
-                        </div>
-                    </div>
-            </div>          
+				<div
+					class="col card-wrapper"
+					data-player="vijay_thalapathy_pics"
+				>
+					<div class="card">
+						<div
+							class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image"
+						>
+							<img
+								class="w-100 h-100"
+								src="./images/vijay thala.png"
+								alt="Vijay"
+							/>
+						</div>
+						<div class="card-body text-center mt-2">
+							<h4 class="text-uppercase card-title">Vijay</h4>
+						</div>
+					</div>
+				</div>
 
-            <div class="col card-wrapper" data-player="vijay_thalapathy_pics">
-                <div class="card border-0">
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                        <img class="w-100 h-100" src="./images/vijay thala.png" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-center mt-4">
-                        <h4 class="text-uppercase card-title">Vijay</h4>
-                        </p>
-                    </div>
-                </div>
-            </div>      
+				<div class="col card-wrapper" data-player="virat_kohli_pics">
+					<div class="card">
+						<div
+							class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image"
+						>
+							<img
+								class="w-100 h-100"
+								src="./images/virat kohli.png"
+								alt="Virat Kohli"
+							/>
+						</div>
+						<div class="card-body text-center mt-2">
+							<h4 class="text-uppercase card-title">
+								Virat Kohli
+							</h4>
+						</div>
+					</div>
+				</div>
+			</div>
 
-            <div class="col card-wrapper" data-player="virat_kohli_pics">
-                <div class="card border-0">
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                        <img class="w-100 h-100" src="./images/virat kohli.png" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-center mt-4">
-                        <h4 class="text-uppercase card-title">Virat Kohli</h4>
-                        </p>
-                    </div>
-                </div>
-            </div>
+			<div class="row mt-5">
+				<div class="col-lg-8 col-md-10 mx-auto">
+					<div class="card shadow-sm upload-results-card">
+						<div class="card-body">
+							<!-- Uploader Section -->
+							<div id="uploader-area">
+								<h3 class="text-center mb-4">
+									Upload an Image
+								</h3>
+								<form class="dropzone" id="dropzone">
+									<div class="dz-message needsclick">
+										<img
+											src="./images/upload.png"
+											width="50vw"
+											height="50vw"
+										/><br />
+										<span class="note needsclick"
+											>Drop files here or click to
+											upload</span
+										>
+									</div>
+								</form>
+								<button
+									id="submitBtn"
+									type="button"
+									class="btn btn-primary btn-block mt-4"
+								>
+									Detect
+								</button>
+							</div>
 
-        </div>
-
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="row">
-                    <div class="col-12 mx-auto">
-                        <form action="/file-upload" class="dropzone" id="dropzone">
-                            <div class="dz-message needsclick">
-                                <img src="./images/upload.png" width="50vw" height="50vw"><br>
-                                <span class="note needsclick">Drop files here or click to upload</span>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-3 mx-auto">
-                        <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-sm-8 error" id="error" >
-                <p>Can't classify image. Classifier was not able to detect face and two eyes properly</p>    
-            </div>
-
-            <div class="col-sm-4" id="resultHolder">
-            </div>
-            <div class="col-sm-4" id="divClassTable">
-                <table id="classTable">
-                        <tr>
-                            <th>Player</th>
-                            <th>Probability Score</th>
-                        </tr>
-                        <tr>
-                            <td>allu arjun</td>
-                            <td id="score_Iconstar_allu_arjun pics"></td>
-                        </tr>
-                        <tr>
-                            <td>samantha</td>
-                            <td id="score_samantha_pics"></td>
-                        </tr>
-                        <tr>
-                            <td>sindhuri</td>
-                            <td id="score_sindhuri_pics"></td>
-                        </tr>
-                        <tr>
-                            <td>vijay thalapathy</td>
-                            <td id="score_vijay_thalapathy_pics"></td>
-                        </tr>
-                        <tr>
-                            <td>Virat Kohli</td>
-                            <td id="score_virat_kohli_pics"></td>
-                        </tr>
-                </table>
-            </div>
-            
-        </div>
-
-    </div>
-
-</body>
-<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<script src="./dropzone.min.js"></script>
-<script src="./app.js"></script>
+							<!-- Results Section -->
+							<div id="results-area" style="display: none">
+								<h3 class="text-center mb-4">Results</h3>
+								<div
+									id="error"
+									class="alert alert-danger"
+									style="display: none"
+								></div>
+								<div class="row align-items-center">
+									<div class="col-md-6">
+										<div id="resultHolder" class="text-center">
+											<!-- Image will be inserted here -->
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div id="divClassTable">
+											<table id="classTable" class="table table-hover">
+												<!-- Table content will be inserted here -->
+											</table>
+										</div>
+									</div>
+								</div>
+								<button
+									id="detectAnotherBtn"
+									type="button"
+									class="btn btn-outline-primary btn-block mt-4"
+								>
+									Detect Another Image
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script src="./dropzone.min.js"></script>
+	<script src="./app.js"></script>
+</html>
+									>
+										Detect
+									</button>
+								</div>
+								<!-- Results Column -->
+								<div
+									class="col-md-6"
+									id="results-area"
+									style="display: none"
+								>
+									<h3 class="text-center mb-4">Results</h3>
+									<div
+										id="error"
+										class="alert alert-danger"
+										style="display: none"
+									></div>
+									<div
+										id="resultHolder"
+										class="text-center mb-3"
+									>
+										<!-- Image will be inserted here -->
+									</div>
+									<div id="divClassTable">
+										<table
+											id="classTable"
+											class="table table-hover"
+										>
+											<!-- Table content will be inserted here -->
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script src="./dropzone.min.js"></script>
+	<script src="./app.js"></script>
 </html>
