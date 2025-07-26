@@ -6,19 +6,51 @@
 		<title>Star Meter - Face Detection</title>
 		<link
 			rel="stylesheet"
-			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
 		/>
 		<link rel="stylesheet" href="./dropzone.min.css" />
 		<link rel="stylesheet" href="./app.css" />
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 	</head>
 
 	<body>
-		<nav class="navbar navbar-light justify-content-center">
-			<a class="navbar-brand" href="#">STAR METER - FACE DETECTOR</a>
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">
+					<span class="brand-icon">🌟</span>
+					STAR METER
+					<span class="brand-subtitle">Face Detection</span>
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link active" href="#home">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#celebrities">Celebrities</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#upload">Upload</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#about">About</a>
+						</li>
+					</ul>
+					<button class="dark-mode-toggle" onclick="toggleDarkMode()">
+						<span class="dark-mode-icon">🌙</span>
+						<span class="dark-mode-text">Dark</span>
+					</button>
+				</div>
+			</div>
 		</nav>
 
 		<div class="container-fluid">
-			<div class="row">
+			<section id="celebrities" class="py-4">
+				<h2 class="text-center mb-4 section-title">Celebrity Recognition</h2>
+				<div class="row">
 				<div
 					class="col card-wrapper"
 					data-player="Iconstar_allu_arjun pics"
@@ -111,9 +143,11 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 
-			<div class="row mt-5">
+			<section id="upload" class="py-5">
+				<h2 class="text-center mb-4 section-title">Upload & Detect</h2>
+				<div class="row mt-5">
 				<div class="col-lg-8 col-md-10 mx-auto">
 					<div class="card shadow-sm upload-results-card">
 						<div class="card-body">
@@ -145,12 +179,11 @@
 							</div>
 
 							<!-- Results Section -->
-							<div id="results-area" style="display: none">
+							<div id="results-area" class="hidden">
 								<h3 class="text-center mb-4">Results</h3>
 								<div
 									id="error"
-									class="alert alert-danger"
-									style="display: none"
+									class="alert alert-danger hidden"
 								></div>
 								<div class="row align-items-center">
 									<div class="col-md-6">
@@ -171,13 +204,29 @@
 									type="button"
 									class="btn btn-outline-primary btn-block mt-4"
 								>
+									<span class="btn-icon">↻</span>
 									Detect Another Image
 								</button>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
+
+			<section id="about" class="py-5">
+				<div class="row">
+					<div class="col-lg-8 mx-auto text-center">
+						<h2 class="section-title mb-4">About Star Meter</h2>
+						<p class="lead">
+							Star Meter uses advanced machine learning algorithms to detect and recognize faces of popular celebrities. 
+							Upload any image and discover which celebrity faces are detected with confidence scores.
+						</p>
+						<p>
+							Our AI model has been trained on thousands of celebrity images to provide accurate recognition results.
+						</p>
+					</div>
+				</div>
+			</section>
 		</div>
 	</body>
 	<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
