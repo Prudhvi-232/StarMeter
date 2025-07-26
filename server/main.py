@@ -7,6 +7,7 @@ import cv2
 import numpy as np
 from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 # Initialize the FastAPI app
@@ -128,6 +129,6 @@ async def detect_from_b64(image_data: ImageB64):
     except Exception as e:
         return {"error": f"Invalid base64 string: {str(e)}"}
 
-@app.get("/")
-def read_root():
-    return {"message": "Welcome to the Star Meter API. Use the /docs endpoint to see the API documentation."}
+# Mount the 'docs' directory to serve the static frontend files (HTML, CSS, JS)
+# The html=True argument configures it to serve index.html for the root path.
+app.mount("/", StaticFiles(directory="docs", html=True), name="static")

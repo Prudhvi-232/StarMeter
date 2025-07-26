@@ -5,7 +5,7 @@ $(document).ready(function () {
     // The results area is hidden by default in the HTML
     // Initialize Dropzone
     let dz = new Dropzone("#dropzone", {
-        url: "http://127.0.0.1:8000/api/detect_from_upload",
+        url: "/api/detect_from_upload", // Use a relative URL to the API endpoint
         maxFiles: 1,
         addRemoveLinks: true,
         autoProcessQueue: false, // We will trigger processing manually
