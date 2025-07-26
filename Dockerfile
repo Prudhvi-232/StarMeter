@@ -24,9 +24,9 @@ USER app
 
 # Expose the port the container will listen on. This is good practice.
 # The PORT environment variable will be provided by Cloud Run.
-EXPOSE 8080
+EXPOSE 8000
 
 # Run uvicorn when the container launches.
 # Use 0.0.0.0 to make it accessible from outside the container.
 # Use the $PORT environment variable provided by Cloud Run.
-CMD ["uvicorn", "server.main:app", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["uvicorn", "server.main:app", "--host", "0.0.0.0", "--port", "8000"]

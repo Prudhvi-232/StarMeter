@@ -94,14 +94,14 @@ This is the easiest way to run the application, as it handles all dependencies w
     ```
 
 2.  **Run the Docker container:**
-    This command maps port 8080 on your machine to port 8080 in the container.
+    This command maps port 8000 on your machine to port 8000 in the container.
 
     ```bash
-    docker run -p 8080:8080 star-meter-app
+    docker run -p 8000:8000 star-meter-app
     ```
 
 3.  **Access the application:**
-    Open your web browser and go to **http://localhost:8080**.
+    Open your web browser and go to **http://localhost:8000**.
 
 ---
 

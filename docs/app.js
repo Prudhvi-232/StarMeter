@@ -98,7 +98,7 @@ $(document).ready(function () {
 	// The results area is hidden by default in the HTML
 	// Initialize Dropzone
 	let dz = new Dropzone("#dropzone", {
-		url: "/api/detect_from_upload", // Use a relative URL to the API endpoint
+		url: "http://127.0.0.1:8000/api/detect_from_upload", // Backend server URL
 		maxFiles: 1,
 		addRemoveLinks: true,
 		autoProcessQueue: false, // We will trigger processing manually
@@ -115,8 +115,9 @@ $(document).ready(function () {
 			// Handle the server's response
 			this.on("success", function (file, response) {
 				console.log("Server response:", response);
-				$("#uploader-area").hide();
-				$("#results-area").show();
+				$("#uploader-area").fadeOut(200, function() {
+					$("#results-area").fadeIn(400);
+				});
 				this.removeFile(file); // Clear the preview
 
 				if (response.error) {
@@ -163,13 +164,14 @@ $(document).ready(function () {
 			// Handle upload errors
 			this.on("error", function (file, message) {
 				console.error("Upload error:", message);
-				$("#uploader-area").hide();
-				$("#error")
-					.show()
-					.text(
-						"Upload Error: Could not connect to the server or an error occurred."
-					);
-				$("#results-area").show();
+				$("#uploader-area").fadeOut(200, function () {
+					$("#error")
+						.show()
+						.text(
+							"Upload Error: Could not connect to the server or an error occurred."
+						);
+					$("#results-area").fadeIn(400);
+				});
 				this.removeFile(file);
 			});
 		},
@@ -186,8 +188,9 @@ $(document).ready(function () {
 
 	// Handle the "Detect Another" button click
 	$("#detectAnotherBtn").on("click", function () {
-		$("#results-area").hide();
-		$("#uploader-area").show();
+		$("#results-area").fadeOut(200, function() {
+			$("#uploader-area").fadeIn(400);
+		});
 		dz.removeAllFiles();
 	});
 });
